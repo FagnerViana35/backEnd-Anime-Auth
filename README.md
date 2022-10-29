@@ -1,16 +1,17 @@
-#Primeira parte do projeto backend
+# Primeira parte do projeto backend
+# Link do Github
+https://github.com/FagnerViana35/exercicio-node-back
 
-O projeto é um crud que contem
+# O projeto é um crud que contem
 
-# Criar um Usuário
-# Listar um Usuário
-# Listar um Usuário com id 
-# Editar um Usuário existente
-# Deletar um Usuário existente
+Criar um Usuário
+Listar um Usuário
+Listar um Usuário com id 
+Editar um Usuário existente
+Deletar um Usuário existente
 # Logar um Usuário existente
 
 # Foi usado um banco NoSql Mongo Database
-
 # URL do banco
 mongodb://localhost:27017
 
@@ -70,21 +71,21 @@ https://gitforwindows.org/
 # Base url: https://rickandmortyapi.com/api
 
 # https://rickandmortyapi.com/api
-# {
-#  "characters": "https://rickandmortyapi.com/api/character",
-#  "locations": "https://rickandmortyapi.com/api/location",
-#  "episodes": "https://rickandmortyapi.com/api/episode"
-# }
+ {
+  "characters": "https://rickandmortyapi.com/api/character",
+  "locations": "https://rickandmortyapi.com/api/location",
+  "episodes": "https://rickandmortyapi.com/api/episode"
+ }
 
 
 
 
 # Dados criados ao inserir um usuário
-# Schema da tabela User
-# id é criado de forma automática pelo Mongodb
-# name é obrigatorio
-# password é obrigatorio  
-# createdAt é default
+ Schema da tabela User
+ id é criado de forma automática pelo Mongodb
+ name é obrigatorio
+ password é obrigatorio  
+ createdAt é default
 
 # Scripts da tabela User
 {
@@ -100,38 +101,40 @@ https://gitforwindows.org/
   "__v": 0
 }
 
-# ###########################################Utilização do Projeto#################################################################
+# Utilização do Projeto
 
 Após instalação o Mongodb ou algum APP que reconheça o scripts NoSQL do MongoDB se caso não tiver, deve-se dar o comando no Visual Studio Code: 
-# npm i mongodb no terminal do vs code para visualizar as tabelas
+ npm i mongodb no terminal do vs code para visualizar as tabelas
 
-# Também tem a possibilidade de acessar pelo Cloud da AWS com os dados acima.
+ Também tem a possibilidade de acessar pelo Cloud da AWS com os dados acima.
 
 Após isso é só testar os verbos com o Postmam ou Insomnia
 Usando a Base URL geral 
 http://localhost:3000
 
-Rotas do Usuário
-# Registrar usuário, tratado na rota ‘/users/register’ (verbo POST), que será precedido de uma verificação dos dados inseridos no cadastro
+#Rotas do Usuário
 
-# Login do usuário, tratado na rota ‘/users/login’ (verbo POST), que será precedido de autenticação no banco de dados
+Registrar usuário, tratado na rota ‘/users/register’ (verbo POST), que será precedido de uma verificação dos dados inseridos no cadastro
 
-# Listar usuários, tratado na rota ‘/users’ (verbo GET)
+Login do usuário, tratado na rota ‘/users/login’ (verbo POST), que será precedido de autenticação no banco de dados
 
-# Listar usuário por id, tratado na rota ‘/users/:id’ (verbo GET)
+Listar usuários, tratado na rota ‘/users’ (verbo GET)
 
-# Atualizar dados do usuário, tratado na rota ‘/users/:id’ (verbo PUT)
+Listar usuário por id, tratado na rota ‘/users/:id’ (verbo GET)
 
-# Remover usuário, tratado na rota ‘/users/:id’ (verbo DELETE)
+Atualizar dados do usuário, tratado na rota ‘/users/:id’ (verbo PUT)
 
-Rotas da da API 
-# Listar Urls da API externa, tratando na rota ‘/desenho/api’ (verbo GET)
+Remover usuário, tratado na rota ‘/users/:id’ (verbo DELETE)
 
-# Listar Caracteristica dos personagens, tratando na rota ‘/desenho/api/character’ (verbo GET)
+#Rotas da da API 
 
-# Listar todos os episódios ‘/desenho/api/episode’ (verbo GET)
+Listar Urls da API externa, tratando na rota ‘/desenho/api’ (verbo GET)
 
-# Listar todas as localizações das personagens ‘/desenho/api/location’ (verbo GET)
+Listar Caracteristica dos personagens, tratando na rota ‘/desenho/api/character’ (verbo GET)
+
+Listar todos os episódios ‘/desenho/api/episode’ (verbo GET)
+
+Listar todas as localizações das personagens ‘/desenho/api/location’ (verbo GET)
 
 
  
