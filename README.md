@@ -68,16 +68,9 @@ https://www.mongodb.com/try/download/database-tools
 https://gitforwindows.org/
 
 # API a ser consumida será 
-# Base url: https://rickandmortyapi.com/api
+# Base url: https://kitsu.io/api/edge/anime
 
-# https://rickandmortyapi.com/api
- {
-  "characters": "https://rickandmortyapi.com/api/character",
-  "locations": "https://rickandmortyapi.com/api/location",
-  "episodes": "https://rickandmortyapi.com/api/episode"
- }
-
-
+# https://kitsu.io/api/edge/anime
 
 
 # Dados criados ao inserir um usuário

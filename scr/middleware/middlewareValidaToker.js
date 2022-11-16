@@ -1,4 +1,5 @@
 import jwt from "jsonwebtoken";
+import expiresInToken from "../config/config.js";
 
 class MiddlewareValidarToken {
     static async middlewareValidarToken( request, response, next){
@@ -20,8 +21,8 @@ class MiddlewareValidarToken {
         if(!/^Bearer$/i.test(scheme)){
             return response.status(401).json({error: 'Token com mau formatado!'});
         }
-        const secret = '510b12ff2dbb6042d58766ec8c131552';
-        jwt.verify(token, secret, (err, decoded) => {
+        
+        jwt.verify(token, expiresInToken.secret, (err, decoded) => {
             if(err){ 
                 return response.status(401).json({error: 'Token invalido!'});
             }

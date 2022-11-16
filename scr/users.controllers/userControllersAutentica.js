@@ -1,22 +1,22 @@
+import expiresInToken from "../config/config.js";
 import users from "../models/User.js";
-//import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 class UserAutentica {
     static authUser = async (request, response) => {
-        const {username, password} = request.body;
-        const user = await users.findOne({ username: username });
-
-        try {
-            //const secret = process.env.SECRET;
-
-            //const token = jwt.sign({id: user.id}, secret, {expiresIn: 86400,});
-            user.password = undefined;
-            // response.status(200).json({ msg: "Usuário autenticado com sucesso!", user, auth: true, token, user: request.userId });
-            response.status(200).json({ msg: "Usuário autenticado com sucesso!", user, auth: true, users});
-
-        }catch (err) {
-            response.status(403).send({ message: "Erro ao fazer o login" });
-        }
+        users.findOne({ username: request.body.username }, (err, user) => {
+            if (err) return response.status(500).send('Ocorreu um erro inesperado no servidor.');
+            if (!user) return response.status(404).send('Usuário não encontrato.');
+       
+            var passwordIsValid = bcrypt.compareSync(request.body.password, user.password);
+            if (!passwordIsValid) return res.status(401).send({ auth: false, token: null });
+       
+            var token = jwt.sign({ id: user._id }, expiresInToken.secret, {
+              expiresIn: expiresInToken.expiresIn //Tempo que expira a chave
+            });
+            response.status(200).send({msg: 'Usuário autenticado com sucesso', auth: true, token: token });
+          });
     }
 }
 

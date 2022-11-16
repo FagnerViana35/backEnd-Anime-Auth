@@ -16,6 +16,4 @@ class ApiControllersTotal{
 export default ApiControllersTotal;
 
 
-// "characters": "https://rickandmortyapi.com/api/"
-
 
